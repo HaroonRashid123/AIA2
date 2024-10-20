@@ -19,10 +19,18 @@ def csv_format(filename):
     return grid
 
 
-# def prob_den_func():
-#     expo = math.exp(-((x - mean) ** 2) / (2 * std ** 2))
-#     return (1 / (math.sqrt(2 * math.pi) * std)) * expo
+def prob_den_func(x, mean, std):
+    
+    #expo = math.exp(-((x - mean) ** 2) / (2 * std ** 2))
 
+    exponent_value = -0.5 * (( (x- mean) / std )) **2
+
+    bottom_value = (1 / math.sqrt(2 * math.pi * std ** 2)) * math.e
+
+    result = bottom_value ** (exponent_value)
+
+    return result
+  
 def mean_and_stand():
 
   grid = csv_format(r'C:\Users\haroo\Desktop\AIA2\Examples\Example0\dataset.csv')
