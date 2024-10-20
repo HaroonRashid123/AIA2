@@ -69,7 +69,6 @@ def mean_and_stand(grid):
             num_of_disease += 1
   # Get average of total patients divided by number of pateince between health and disease
   prior_health = num_of_healthy / (i +1)
-  print(prior_health)
   prior_disease = num_of_disease / (i + 1)
    
   healthy_temp_array = np.array(healthy_temp_list)
@@ -103,8 +102,8 @@ def mean_and_stand(grid):
   return data
 
 def main():
-  dataset_filepath = r'C:\Users\haroo\Desktop\AIA2\Examples\Example0\dataset.csv'
-  patient_measurements = [37.6, 80]  
+  dataset_filepath = r'C:\Users\haroo\Desktop\AIA2\Examples\Example2\dataset.csv'
+  patient_measurements = [37.75, 85]  
   print(naive_bayes_classifier(dataset_filepath, patient_measurements))
  
 main()
